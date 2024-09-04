@@ -195,7 +195,7 @@ local_work_dir = os.getcwd()
 remote_work_dir = config.executors[0].working_dir+"/remote_work"
     
 print("Starting MLFlow server...")
-mlflow_future = start_mlflow(
+start_mlflow_future = start_mlflow(
     direct_input = "hello workflow",
     inputs = [
         PWFile(
@@ -216,7 +216,7 @@ mlflow_future = start_mlflow(
 )
     
 # Force workflow to wait for app to finish
-start_mlflow.result()
+start_mlflow_future.result()
         
 print('Done starting MLFlow.')
 
