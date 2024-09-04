@@ -196,25 +196,24 @@ remote_work_dir = config.executors[0].working_dir+"/remote_work"
     
 print("Starting MLFlow server...")
 mlflow_future = start_mlflow(
-                direct_input = "hello workflow",
-                inputs = [
-                    PWFile(
-                        # Rsync with "copy dir by name" no trailing slash convention
-                        url = 'file://usercontainer/'+local_dir+'/test_input',
-                        local_path = remote_dir+'/test_input'
-                    )
-                ],
-                outputs = [
-                    PWFile(
-                        url = 'file://usercontainer/'+local_dir+'/outputs/test_output',
-                        local_path = remote_dir+'/test_output'
-                    )
-                ],
-                # Any files in outputs directory at end of app are rsynced back
-                stdout = remote_dir+'/test_output/std.out',
-                stderr = remote_dir+'/test_output/std.err'
-            )
+    direct_input = "hello workflow",
+    inputs = [
+        PWFile(
+            # Rsync with "copy dir by name" no trailing slash convention
+            url = 'file://usercontainer/'+local_dir+'/test_input',
+            local_path = remote_dir+'/test_input'
         )
+    ],
+    outputs = [
+        PWFile(
+            url = 'file://usercontainer/'+local_dir+'/outputs/test_output',
+            local_path = remote_dir+'/test_output'
+        )
+    ],
+    # Any files in outputs directory at end of app are rsynced back
+    stdout = remote_dir+'/test_output/std.out',
+    stderr = remote_dir+'/test_output/std.err'
+)
     
 # Force workflow to wait for app to finish
 start_mlflow.result()
