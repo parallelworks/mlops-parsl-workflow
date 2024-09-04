@@ -1,0 +1,8 @@
+{
+    "repo": "https://github.com/parallelworks/mlops-parsl-workflow.git",
+    "branch": "canary",
+    "dir": ".",
+    "xml": "workflow.xml",
+    "thumbnail": "thumb/parsl.png",
+    "readme": "README.md"
+}
