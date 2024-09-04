@@ -148,7 +148,7 @@ def start_mlflow(direct_input,inputs=[], outputs=[], stdout='mlflow.server.stdou
         # replaced with actual MLFlow server 
         # startup commands.
         return '''
-        sleep 10
+        sleep 100
         hostname
         date
         whoami
