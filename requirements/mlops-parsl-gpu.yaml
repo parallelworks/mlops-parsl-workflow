@@ -1,4 +1,3 @@
-name: mlops-parsl-gpu
 channels:
   - anaconda
   - conda-forge
@@ -198,7 +197,7 @@ dependencies:
   - pycparser=2.22=pyhd8ed1ab_0
   - pydantic=2.9.2=pyhd8ed1ab_0
   - pydantic-core=2.23.4=py39he612d8f_0
-  - pydot=3.0.1=py39hf3d152e_0
+  - pydot=3.0.1=py39hf3d152e_1
   - pygit2=1.15.1=py39h8cd3c5a_1
   - pygments=2.15.1=py39h06a4308_1
   - pygtrie=2.5.0=pyhd8ed1ab_0
@@ -224,7 +223,7 @@ dependencies:
   - ruamel.yaml.clib=0.2.8=py39hd1e30aa_0
   - scmrepo=3.3.7=pyhd8ed1ab_0
   - semver=3.0.2=pyhd8ed1ab_0
-  - setuptools=72.1.0=py39h06a4308_0
+  - setuptools=75.1.0=py39h06a4308_0
   - shellingham=1.5.4=pyhd8ed1ab_0
   - shortuuid=1.0.13=pyhd8ed1ab_0
   - shtab=1.7.1=pyhd8ed1ab_0
@@ -326,6 +325,18 @@ dependencies:
       - namex==0.0.8
       - networkx==2.5.1
       - numpy==1.26.4
+      - nvidia-cublas-cu12==12.3.4.1
+      - nvidia-cuda-cupti-cu12==12.3.101
+      - nvidia-cuda-nvcc-cu12==12.3.107
+      - nvidia-cuda-nvrtc-cu12==12.3.107
+      - nvidia-cuda-runtime-cu12==12.3.101
+      - nvidia-cudnn-cu12==8.9.7.29
+      - nvidia-cufft-cu12==11.0.12.1
+      - nvidia-curand-cu12==10.3.4.107
+      - nvidia-cusolver-cu12==11.5.4.101
+      - nvidia-cusparse-cu12==12.2.0.103
+      - nvidia-nccl-cu12==2.19.3
+      - nvidia-nvjitlink-cu12==12.3.101
       - opentelemetry-api==1.27.0
       - opentelemetry-sdk==1.27.0
       - opentelemetry-semantic-conventions==0.48b0
@@ -334,7 +345,7 @@ dependencies:
       - pandas==2.1.4
       - parsl==2024.9.16
       - plotly==5.24.1
-      - protobuf==4.25.4
+      - protobuf==4.25.5
       - pyarrow==17.0.0
       - pyasn1==0.6.1
       - pyasn1-modules==0.4.1
@@ -357,4 +368,4 @@ dependencies:
       - typeguard==4.3.0
       - werkzeug==3.0.4
       - wrapt==1.16.0
-prefix: /home/lobielodan/pw/.miniconda3c/envs/mlops-parsl-gpu
+
